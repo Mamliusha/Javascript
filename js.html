@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <style>
+      #plus {
+        background-color: blueviolet;
+      }
+      #minus {
+        background-color: cornflowerblue;
+      }
+      #times {
+        background-color: darkorchid;
+      }
+      #divide {
+        background-color: darkseagreen;
+      }
+      button:hover {
+        box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8) inset,
+          1px 1px 5px rgba(0, 0, 0, 0.4);
+      }
+      #buttons {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>My first Calculator</h2>
+    <input id="firstnumber" />
+
+    <div id="buttons">
+      <button id="plus" onclick="op='+'">+</button>
+      <button id="minus" onclick="op='-'">-</button>
+      <button id="times" onclick="op='*'">x</button>
+      <button id="divide" onclick="op='/'">:</button>
+    </div>
+
+    <input id="secondnumber" />
+    <br />
+
+    <button onclick="func()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+      let op;
+
+      function func() {
+        let result;
+        let firstnumber = Number(document.getElementById("firstnumber").value);
+        let secondnumber = Number(
+          document.getElementById("secondnumber").value
+        );
+        switch (op) {
+          case "+":
+            result = firstnumber + secondnumber;
+            break;
+          case "-":
+            result = firstnumber - secondnumber;
+            break;
+          case "*":
+            result = firstnumber * secondnumber;
+            break;
+          case "/":
+            result = firstnumber / secondnumber;
+            break;
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
