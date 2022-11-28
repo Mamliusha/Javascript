@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+img{
+    max-width: 20%;
+}
+    </style>
+</head>
+<body>
+<img src="/img/1.jpg.jpg" alt="" id="cat1">
+<button id="next" onclick="Next()">Вперед</button>
+<button id="previous">Назад</button>
+    <script>
+        function Next(){
+let cat1 = document.getElementById('cat1');
+cat1.src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Redhead_Cat_%28%D0%A0%D1%8B%D0%B6%D0%B8%D0%B9_%D0%9A%D0%BE%D1%82%29.jpg/1200px-Redhead_Cat_%28%D0%A0%D1%8B%D0%B6%D0%B8%D0%B9_%D0%9A%D0%BE%D1%82%29.jpg"
+        }
+    </script>
+
+</body>
+</html>

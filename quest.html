@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+      <div id="Color" onclick="ColorChange()">
+    <input type="text" id="Yourname" onchange="Greetings()" >Как тебя зовут?</div>
+
+    <div id="button"><input type="button" value="Сохранить" onclick="ClickMe()"/></div>
+    <script>
+let name
+function Greetings(){
+  name = document.getElementById('Yourname');
+  console.log(name.value)}
+
+function ClickMe(){
+alert("Hello" + " " + name.value);
+}
+
+function ColorChange(){
+  var Color = document.getElementById('Color');
+Color.style.backgroundColor ='green';
+}
+    </script>
+</body>
+</html>
