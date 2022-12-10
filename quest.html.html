@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			background-size: 100%;
+			background-image: url(https://e0.pxfuel.com/wallpapers/377/832/desktop-wallpaper-game-of-thrones-wiki-game-thrones-u.jpg) ;
+		}
+		.form{
+			display: grid;
+			background-color: gray;
+			opacity: 0.5;
+			width: 30%;
+			align-items: center;
+			justify-content: center;
+			align-content: center;
+			height: 80%;
+			margin-left: 30%;
+			margin-top: 7%;
+			padding-bottom: 15px;
+		}
+		p,h1{
+			color: rgb(226, 234, 232);
+		}
+		input{
+			color: rgb(71, 62, 51);
+		}
+	</style>
+	<script>
+const form = document.getElementById('form');
+const name = document.getElementById('name');
+const surname = document.getElementById('surname');
+const age = document.getElementById('age');
+const work = document.getElementById('work');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+
+function showNameMessage() {
+		let name = document.getElementById('name');
+		document.getElementById('errorName').innerHTML = "";
+		if (name.value == '') {
+				document.getElementById('errorName').innerHTML += "Пожалуйста, укажите имя<br>";
+		}
+}
+function showSurnameMessage() {
+		let surname = document.getElementById('surname');
+		document.getElementById('errorSurname').innerHTML = "";
+		if (surname.value == '') {
+				document.getElementById('errorSurname').innerHTML += "Пожалуйста, укажите фамилию<br>";
+		}
+}
+function showAgeMessage() {
+		let age = document.getElementById('age');
+		document.getElementById('errorAge').innerHTML = "";
+		if (age.value == '') {
+				document.getElementById('errorAge').innerHTML += "Пожалуйста, укажите возраст<br>";
+		}
+}
+function showWorkMessage() {
+		let work = document.getElementById('work');
+		document.getElementById('errorWork').innerHTML = "";
+		if (work.value == '') {
+				document.getElementById('errorWork').innerHTML += "Пожалуйста, укажите место работы<br>";
+		}
+}
+function showEmailMessage() {
+		let email = document.getElementById('email');
+		document.getElementById('errorEmail').innerHTML = "";
+		if (email.value == '') {
+				document.getElementById('errorEmail').innerHTML += "Пожалуйста, укажите электронную почту<br>";
+		}
+}
+
+		function Check() {
+			showNameMessage();
+			showSurnameMessage();
+			showAgeMessage();
+			showWorkMessage();
+			showEmailMessage();
+		}
+		
+	</script>
+</head>
+<body>
+	
+	<form id="form" class="form">
+	<h1>Введите данные</h1>
+	<p>Ваше имя</p>
+	<input onblur="showNameMessage()" type="text" id="name" class="input" />	
+	<div id="errorName"></div>
+	<p>Ваша фамилия</p>
+	<input onblur="showSurnameMessage()" type="text" id="surname" class="input" />
+	<div id="errorSurname"></div>
+	<p>Ваш возраст</p>
+	<input onblur="showAgeMessage()" type="text" id="age" class="input" />
+	<div id="errorAge"></div>
+	<p>Где вы работаете?</p>
+	<input onblur="showWorkMessage()" type="text" id="work" class="input" />
+	<div id="errorWork"></div>
+	<p>Ваша электронная почта</p>
+	<input onblur="showEmailMessage()" type="text" id="email" class="input" />
+	<div id="errorEmail"></div>
+	<br /><button onclick="Check()" type="button" value="Сохранить">Сохранить</button>
+	</form>
+</body>
+</html>
